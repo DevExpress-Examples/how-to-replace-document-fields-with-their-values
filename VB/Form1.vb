@@ -45,8 +45,6 @@ Namespace RichEditFieldsToValues
 					Dim count As Integer = fields.Count
 					For i As Integer = count - 1 To 0 Step -1
 						Dim field As Field = fields(i)
-						field.ShowCodes = True
-						Dim fieldCode As String = document.GetText(field.CodeRange)
 						Dim fieldResult As String = document.GetRtfText(field.ResultRange)
 						Dim fieldPosition As DocumentPosition = field.Range.Start
 						document.Delete(field.Range)
