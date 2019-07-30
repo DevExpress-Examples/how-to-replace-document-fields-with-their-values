@@ -43,8 +43,6 @@ namespace RichEditFieldsToValues {
                     int count = fields.Count;
                     for (int i = count - 1; i >= 0; i--) {
                         Field field = fields[i];
-                        field.ShowCodes = true;
-                        string fieldCode = document.GetText(field.CodeRange);
                         string fieldResult = document.GetRtfText(field.ResultRange);
                         DocumentPosition fieldPosition = field.Range.Start;
                         document.Delete(field.Range);
