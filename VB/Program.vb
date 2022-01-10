@@ -1,20 +1,20 @@
-Imports Microsoft.VisualBasic
 Imports System
-Imports System.Collections.Generic
+Imports System.Net
 Imports System.Windows.Forms
 
 Namespace RichEditFieldsToValues
-	Friend NotInheritable Class Program
-		''' <summary>
-		''' The main entry point for the application.
-		''' </summary>
-		Private Sub New()
-		End Sub
-		<STAThread> _
-		Shared Sub Main()
-			Application.EnableVisualStyles()
-			Application.SetCompatibleTextRenderingDefault(False)
-			Application.Run(New Form1())
-		End Sub
-	End Class
+
+    Friend Module Program
+
+        ''' <summary>
+        ''' The main entry point for the application.
+        ''' </summary>
+        <STAThread>
+        Sub Main()
+            Call Application.EnableVisualStyles()
+            Application.SetCompatibleTextRenderingDefault(False)
+            ServicePointManager.SecurityProtocol = ServicePointManager.SecurityProtocol Or SecurityProtocolType.Tls12
+            Call Application.Run(New Form1())
+        End Sub
+    End Module
 End Namespace
