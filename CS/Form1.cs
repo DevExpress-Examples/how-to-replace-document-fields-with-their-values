@@ -19,7 +19,7 @@ namespace RichEditFieldsToValues {
             list.Add(new Employee("Peter Parker", "Spiderman road 123"));
             
             richEditControl1.Options.MailMerge.DataSource = list;
-            richEditControl1.Options.MailMerge.ViewMergedData = true;    
+            richEditControl1.Options.MailMerge.ViewMergedData = true;
         }
 
         private void richEditControl1_CalculateDocumentVariable(object sender, DevExpress.XtraRichEdit.CalculateDocumentVariableEventArgs e) {
@@ -34,28 +34,7 @@ namespace RichEditFieldsToValues {
         }
 
         private void FieldsToValues(RichEditControl control) {
-            control.BeginUpdate();
-            try {
-                Document document = control.Document;
-                document.BeginUpdate();
-                try {
-                    FieldCollection fields = document.Fields;
-                    int count = fields.Count;
-                    for (int i = count - 1; i >= 0; i--) {
-                        Field field = fields[i];
-                        string fieldResult = document.GetRtfText(field.ResultRange);
-                        DocumentPosition fieldPosition = field.Range.Start;
-                        document.Delete(field.Range);
-                        document.InsertRtfText(fieldPosition, fieldResult);
-                    }
-                }
-                finally {
-                    document.EndUpdate();
-                }
-            }
-            finally {
-                control.EndUpdate();
-            }
+            control.Document.UnlinkAllFields();
         }
     }
 

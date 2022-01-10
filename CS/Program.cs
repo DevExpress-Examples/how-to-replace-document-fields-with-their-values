@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Windows.Forms;
 
 namespace RichEditFieldsToValues {
@@ -11,6 +12,7 @@ namespace RichEditFieldsToValues {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            System.Net.ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
             Application.Run(new Form1());
         }
     }
