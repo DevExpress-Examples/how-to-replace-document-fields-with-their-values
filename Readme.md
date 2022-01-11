@@ -8,7 +8,9 @@
 
 
 When the RichEditControl document is merged with data via the <a href="http://documentation.devexpress.com/#WindowsForms/CustomDocument9330"><u>Mail Merge</u></a> mechanism, the resulting (merged) document does not contain any fields. This is very convenient because this document is self-contained and it can be sent to the client without any additional processing. 
-Instead of the mail merge operation, you can replace fields with their values using the [Field.Unlink](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Field.Unlink), [FieldCollection.Unlink](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.FieldCollection.Unlink) or [Document.UnlinkAllFields](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document.UnlinkAllFields) method. 
+
+
+> **Starting from v21.2**, use the [Field.Unlink](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Field.Unlink), [FieldCollection.Unlink](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.FieldCollection.Unlink) or [Document.UnlinkAllFields](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.Document.UnlinkAllFields) method instead of the mail merge operation to replace fields with their values.
 
 
 <!-- default file list -->
