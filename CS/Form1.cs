@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraRichEdit.API.Native;
+using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Ribbon;
 
 namespace RichEditFieldsToValues {
-    public partial class Form1 : Form {
+    public partial class Form1 : RibbonForm {
         public Form1() {
             InitializeComponent();
 
@@ -28,33 +30,13 @@ namespace RichEditFieldsToValues {
                 e.Handled = true;
             }
         }
-
-        private void button1_Click(object sender, EventArgs e) {
-            FieldsToValues(richEditControl1);
-        }
-
         private void FieldsToValues(RichEditControl control) {
             control.Document.UnlinkAllFields();
         }
-    }
 
-    public class Employee {
-        string name;
-        
-        public string Name {
-            get { return name; }
-            set { name = value; }
+        private void btnReplaceFields_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FieldsToValues(richEditControl1);
         }
-        string address;
-
-        public string Address {
-            get {return address;}
-            set { address = value;}
-        }
-
-        public Employee(string name, string address) {
-            this.name = name;
-            this.address = address;
-        }
-    }
+    }   
 }

@@ -3,11 +3,12 @@ Imports System.Drawing
 Imports System.Collections.Generic
 Imports System.Windows.Forms
 Imports DevExpress.XtraRichEdit
+Imports DevExpress.XtraBars.Ribbon
 
 Namespace RichEditFieldsToValues
 
-    Public Partial Class Form1
-        Inherits Form
+    Partial Public Class Form1
+        Inherits RibbonForm
 
         Public Sub New()
             InitializeComponent()
@@ -27,44 +28,12 @@ Namespace RichEditFieldsToValues
             End If
         End Sub
 
-        Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)
-            FieldsToValues(richEditControl1)
-        End Sub
-
         Private Sub FieldsToValues(ByVal control As RichEditControl)
             control.Document.UnlinkAllFields()
         End Sub
-    End Class
 
-    Public Class Employee
-
-        Private nameField As String
-
-        Public Property Name As String
-            Get
-                Return nameField
-            End Get
-
-            Set(ByVal value As String)
-                nameField = value
-            End Set
-        End Property
-
-        Private addressField As String
-
-        Public Property Address As String
-            Get
-                Return addressField
-            End Get
-
-            Set(ByVal value As String)
-                addressField = value
-            End Set
-        End Property
-
-        Public Sub New(ByVal name As String, ByVal address As String)
-            nameField = name
-            addressField = address
+        Private Sub btnReplaceFields_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnReplaceFields.ItemClick
+            FieldsToValues(richEditControl1)
         End Sub
     End Class
 End Namespace

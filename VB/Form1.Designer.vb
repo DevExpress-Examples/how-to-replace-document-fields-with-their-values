@@ -26,173 +26,128 @@ Namespace RichEditFieldsToValues
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RichEditFieldsToValues.Form1))
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
             Me.richEditControl1 = New DevExpress.XtraRichEdit.RichEditControl()
-            Me.barManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-            Me.mailMergeBar1 = New DevExpress.XtraRichEdit.UI.MailMergeBar()
-            Me.insertMergeFieldItem1 = New DevExpress.XtraRichEdit.UI.InsertMergeFieldItem()
-            Me.showAllFieldCodesItem1 = New DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem()
-            Me.showAllFieldResultsItem1 = New DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem()
-            Me.toggleViewMergedDataItem1 = New DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem()
-            Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-            Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-            Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-            Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-            Me.button1 = New System.Windows.Forms.Button()
-            Me.richEditBarController1 = New DevExpress.XtraRichEdit.UI.RichEditBarController()
-            CType((Me.barManager1), System.ComponentModel.ISupportInitialize).BeginInit()
-            CType((Me.richEditBarController1), System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
+            Me.InsertMergeFieldItem1 = New DevExpress.XtraRichEdit.UI.InsertMergeFieldItem()
+            Me.ShowAllFieldCodesItem1 = New DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem()
+            Me.ShowAllFieldResultsItem1 = New DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem()
+            Me.ToggleViewMergedDataItem1 = New DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem()
+            Me.btnReplaceFields = New DevExpress.XtraBars.BarButtonItem()
+            Me.MailingsRibbonPage1 = New DevExpress.XtraRichEdit.UI.MailingsRibbonPage()
+            Me.MailMergeRibbonPageGroup1 = New DevExpress.XtraRichEdit.UI.MailMergeRibbonPageGroup()
+            Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+            Me.RichEditBarController1 = New DevExpress.XtraRichEdit.UI.RichEditBarController(Me.components)
+            CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.RichEditBarController1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
-            ' 
-            ' richEditControl1
-            ' 
-            Me.richEditControl1.Anchor = CType(((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right)), System.Windows.Forms.AnchorStyles)
-            Me.richEditControl1.Location = New System.Drawing.Point(9, 36)
-            Me.richEditControl1.Margin = New System.Windows.Forms.Padding(2)
-            Me.richEditControl1.MenuManager = Me.barManager1
+            '
+            'richEditControl1
+            '
+            Me.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill
+            Me.richEditControl1.Location = New System.Drawing.Point(0, 193)
+            Me.richEditControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+            Me.richEditControl1.MenuManager = Me.RibbonControl1
             Me.richEditControl1.Name = "richEditControl1"
-            Me.richEditControl1.Size = New System.Drawing.Size(664, 442)
+            Me.richEditControl1.Size = New System.Drawing.Size(795, 467)
             Me.richEditControl1.TabIndex = 0
-            Me.richEditControl1.Text = "richEditControl1"
-            AddHandler Me.richEditControl1.CalculateDocumentVariable, New DevExpress.XtraRichEdit.CalculateDocumentVariableEventHandler(AddressOf Me.richEditControl1_CalculateDocumentVariable)
-            ' 
-            ' barManager1
-            ' 
-            Me.barManager1.Bars.AddRange(New DevExpress.XtraBars.Bar() {Me.mailMergeBar1})
-            Me.barManager1.DockControls.Add(Me.barDockControlTop)
-            Me.barManager1.DockControls.Add(Me.barDockControlBottom)
-            Me.barManager1.DockControls.Add(Me.barDockControlLeft)
-            Me.barManager1.DockControls.Add(Me.barDockControlRight)
-            Me.barManager1.Form = Me
-            Me.barManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.insertMergeFieldItem1, Me.showAllFieldCodesItem1, Me.showAllFieldResultsItem1, Me.toggleViewMergedDataItem1})
-            Me.barManager1.MaxItemId = 4
-            ' 
-            ' mailMergeBar1
-            ' 
-            Me.mailMergeBar1.DockCol = 0
-            Me.mailMergeBar1.DockRow = 0
-            Me.mailMergeBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-            Me.mailMergeBar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.insertMergeFieldItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.showAllFieldCodesItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.showAllFieldResultsItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.toggleViewMergedDataItem1)})
-            ' 
-            ' insertMergeFieldItem1
-            ' 
-            Me.insertMergeFieldItem1.Glyph = CType((resources.GetObject("insertMergeFieldItem1.Glyph")), System.Drawing.Image)
-            Me.insertMergeFieldItem1.Id = 0
-            Me.insertMergeFieldItem1.LargeGlyph = CType((resources.GetObject("insertMergeFieldItem1.LargeGlyph")), System.Drawing.Image)
-            Me.insertMergeFieldItem1.Name = "insertMergeFieldItem1"
-            ' 
-            ' showAllFieldCodesItem1
-            ' 
-            Me.showAllFieldCodesItem1.Glyph = CType((resources.GetObject("showAllFieldCodesItem1.Glyph")), System.Drawing.Image)
-            Me.showAllFieldCodesItem1.Id = 1
-            Me.showAllFieldCodesItem1.LargeGlyph = CType((resources.GetObject("showAllFieldCodesItem1.LargeGlyph")), System.Drawing.Image)
-            Me.showAllFieldCodesItem1.Name = "showAllFieldCodesItem1"
-            ' 
-            ' showAllFieldResultsItem1
-            ' 
-            Me.showAllFieldResultsItem1.Glyph = CType((resources.GetObject("showAllFieldResultsItem1.Glyph")), System.Drawing.Image)
-            Me.showAllFieldResultsItem1.Id = 2
-            Me.showAllFieldResultsItem1.LargeGlyph = CType((resources.GetObject("showAllFieldResultsItem1.LargeGlyph")), System.Drawing.Image)
-            Me.showAllFieldResultsItem1.Name = "showAllFieldResultsItem1"
-            ' 
-            ' toggleViewMergedDataItem1
-            ' 
-            Me.toggleViewMergedDataItem1.Glyph = CType((resources.GetObject("toggleViewMergedDataItem1.Glyph")), System.Drawing.Image)
-            Me.toggleViewMergedDataItem1.Id = 3
-            Me.toggleViewMergedDataItem1.LargeGlyph = CType((resources.GetObject("toggleViewMergedDataItem1.LargeGlyph")), System.Drawing.Image)
-            Me.toggleViewMergedDataItem1.Name = "toggleViewMergedDataItem1"
-            ' 
-            ' barDockControlTop
-            ' 
-            Me.barDockControlTop.CausesValidation = False
-            Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-            Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-            Me.barDockControlTop.Size = New System.Drawing.Size(682, 31)
-            ' 
-            ' barDockControlBottom
-            ' 
-            Me.barDockControlBottom.CausesValidation = False
-            Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.barDockControlBottom.Location = New System.Drawing.Point(0, 536)
-            Me.barDockControlBottom.Size = New System.Drawing.Size(682, 0)
-            ' 
-            ' barDockControlLeft
-            ' 
-            Me.barDockControlLeft.CausesValidation = False
-            Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-            Me.barDockControlLeft.Location = New System.Drawing.Point(0, 31)
-            Me.barDockControlLeft.Size = New System.Drawing.Size(0, 505)
-            ' 
-            ' barDockControlRight
-            ' 
-            Me.barDockControlRight.CausesValidation = False
-            Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-            Me.barDockControlRight.Location = New System.Drawing.Point(682, 31)
-            Me.barDockControlRight.Size = New System.Drawing.Size(0, 505)
-            ' 
-            ' button1
-            ' 
-            Me.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-            Me.button1.Location = New System.Drawing.Point(252, 492)
-            Me.button1.Name = "button1"
-            Me.button1.Size = New System.Drawing.Size(179, 23)
-            Me.button1.TabIndex = 1
-            Me.button1.Text = "Replace fields with their values"
-            Me.button1.UseVisualStyleBackColor = True
-            AddHandler Me.button1.Click, New System.EventHandler(AddressOf Me.button1_Click)
-            ' 
-            ' richEditBarController1
-            ' 
-            Me.richEditBarController1.BarItems.Add(Me.insertMergeFieldItem1)
-            Me.richEditBarController1.BarItems.Add(Me.showAllFieldCodesItem1)
-            Me.richEditBarController1.BarItems.Add(Me.showAllFieldResultsItem1)
-            Me.richEditBarController1.BarItems.Add(Me.toggleViewMergedDataItem1)
-            Me.richEditBarController1.RichEditControl = Me.richEditControl1
-            ' 
-            ' Form1
-            ' 
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            '
+            'RibbonControl1
+            '
+            Me.RibbonControl1.EmptyAreaImageOptions.ImagePadding = New System.Windows.Forms.Padding(26, 30, 26, 30)
+            Me.RibbonControl1.ExpandCollapseItem.Id = 0
+            Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.InsertMergeFieldItem1, Me.ShowAllFieldCodesItem1, Me.ShowAllFieldResultsItem1, Me.ToggleViewMergedDataItem1, Me.btnReplaceFields})
+            Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
+            Me.RibbonControl1.MaxItemId = 6
+            Me.RibbonControl1.Name = "RibbonControl1"
+            Me.RibbonControl1.OptionsMenuMinWidth = 289
+            Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.MailingsRibbonPage1})
+            Me.RibbonControl1.Size = New System.Drawing.Size(795, 193)
+            '
+            'InsertMergeFieldItem1
+            '
+            Me.InsertMergeFieldItem1.Id = 1
+            Me.InsertMergeFieldItem1.Name = "InsertMergeFieldItem1"
+            '
+            'ShowAllFieldCodesItem1
+            '
+            Me.ShowAllFieldCodesItem1.Id = 2
+            Me.ShowAllFieldCodesItem1.Name = "ShowAllFieldCodesItem1"
+            '
+            'ShowAllFieldResultsItem1
+            '
+            Me.ShowAllFieldResultsItem1.Id = 3
+            Me.ShowAllFieldResultsItem1.Name = "ShowAllFieldResultsItem1"
+            '
+            'ToggleViewMergedDataItem1
+            '
+            Me.ToggleViewMergedDataItem1.Id = 4
+            Me.ToggleViewMergedDataItem1.Name = "ToggleViewMergedDataItem1"
+            '
+            'btnReplaceFields
+            '
+            Me.btnReplaceFields.Caption = "Replace Fields with Values"
+            Me.btnReplaceFields.Id = 5
+            Me.btnReplaceFields.ImageOptions.SvgImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+            Me.btnReplaceFields.Name = "btnReplaceFields"
+            '
+            'MailingsRibbonPage1
+            '
+            Me.MailingsRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.MailMergeRibbonPageGroup1, Me.RibbonPageGroup1})
+            Me.MailingsRibbonPage1.Name = "MailingsRibbonPage1"
+            '
+            'MailMergeRibbonPageGroup1
+            '
+            Me.MailMergeRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
+            Me.MailMergeRibbonPageGroup1.ItemLinks.Add(Me.InsertMergeFieldItem1)
+            Me.MailMergeRibbonPageGroup1.ItemLinks.Add(Me.ShowAllFieldCodesItem1)
+            Me.MailMergeRibbonPageGroup1.ItemLinks.Add(Me.ShowAllFieldResultsItem1)
+            Me.MailMergeRibbonPageGroup1.ItemLinks.Add(Me.ToggleViewMergedDataItem1, "P")
+            Me.MailMergeRibbonPageGroup1.Name = "MailMergeRibbonPageGroup1"
+            '
+            'RibbonPageGroup1
+            '
+            Me.RibbonPageGroup1.ItemLinks.Add(Me.btnReplaceFields)
+            Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+            Me.RibbonPageGroup1.Text = "Replace"
+            '
+            'RichEditBarController1
+            '
+            Me.RichEditBarController1.BarItems.Add(Me.InsertMergeFieldItem1)
+            Me.RichEditBarController1.BarItems.Add(Me.ShowAllFieldCodesItem1)
+            Me.RichEditBarController1.BarItems.Add(Me.ShowAllFieldResultsItem1)
+            Me.RichEditBarController1.BarItems.Add(Me.ToggleViewMergedDataItem1)
+            Me.RichEditBarController1.Control = Me.richEditControl1
+            '
+            'Form1
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(682, 536)
-            Me.Controls.Add(Me.button1)
+            Me.ClientSize = New System.Drawing.Size(795, 660)
             Me.Controls.Add(Me.richEditControl1)
-            Me.Controls.Add(Me.barDockControlLeft)
-            Me.Controls.Add(Me.barDockControlRight)
-            Me.Controls.Add(Me.barDockControlBottom)
-            Me.Controls.Add(Me.barDockControlTop)
-            Me.Margin = New System.Windows.Forms.Padding(2)
+            Me.Controls.Add(Me.RibbonControl1)
+            Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
             Me.Name = "Form1"
+            Me.Ribbon = Me.RibbonControl1
             Me.Text = "Form1"
-            CType((Me.barManager1), System.ComponentModel.ISupportInitialize).EndInit()
-            CType((Me.richEditBarController1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.RichEditBarController1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
+            Me.PerformLayout()
+
         End Sub
 
 #End Region
         Private richEditControl1 As DevExpress.XtraRichEdit.RichEditControl
-
-        Private barManager1 As DevExpress.XtraBars.BarManager
-
-        Private barDockControlTop As DevExpress.XtraBars.BarDockControl
-
-        Private barDockControlBottom As DevExpress.XtraBars.BarDockControl
-
-        Private barDockControlLeft As DevExpress.XtraBars.BarDockControl
-
-        Private barDockControlRight As DevExpress.XtraBars.BarDockControl
-
-        Private button1 As System.Windows.Forms.Button
-
-        Private mailMergeBar1 As DevExpress.XtraRichEdit.UI.MailMergeBar
-
-        Private insertMergeFieldItem1 As DevExpress.XtraRichEdit.UI.InsertMergeFieldItem
-
-        Private showAllFieldCodesItem1 As DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem
-
-        Private showAllFieldResultsItem1 As DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem
-
-        Private toggleViewMergedDataItem1 As DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem
-
-        Private richEditBarController1 As DevExpress.XtraRichEdit.UI.RichEditBarController
+        Friend WithEvents RibbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+        Friend WithEvents InsertMergeFieldItem1 As DevExpress.XtraRichEdit.UI.InsertMergeFieldItem
+        Friend WithEvents ShowAllFieldCodesItem1 As DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem
+        Friend WithEvents ShowAllFieldResultsItem1 As DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem
+        Friend WithEvents ToggleViewMergedDataItem1 As DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem
+        Friend WithEvents btnReplaceFields As DevExpress.XtraBars.BarButtonItem
+        Friend WithEvents MailingsRibbonPage1 As DevExpress.XtraRichEdit.UI.MailingsRibbonPage
+        Friend WithEvents MailMergeRibbonPageGroup1 As DevExpress.XtraRichEdit.UI.MailMergeRibbonPageGroup
+        Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+        Friend WithEvents RichEditBarController1 As DevExpress.XtraRichEdit.UI.RichEditBarController
     End Class
 End Namespace
