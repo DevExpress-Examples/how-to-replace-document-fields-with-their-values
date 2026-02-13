@@ -24,7 +24,7 @@ When the RichEditControl document is merged with data via the <a href="http://do
 ## Documentation
 <a href="https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.FieldCollection#replace-fields-with-field-values"><u>Replace Fields with Field Values</u></a>
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-replace-document-fields-with-their-values&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-replace-document-fields-with-their-values&~~~was_helpful=no)
 
